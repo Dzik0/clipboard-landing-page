@@ -23,6 +23,13 @@ body {
   background-color: white;
   background-image: url("/bg-header-mobile.png");
   background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+@media (min-width: 1000px) {
+  body {
+    background-image: url("/bg-header-desktop.png");
+  }
 }
 
 button {

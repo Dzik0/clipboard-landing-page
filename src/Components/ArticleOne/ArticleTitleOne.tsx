@@ -4,6 +4,6 @@ interface TitleProps {
   children: ReactNode;
 }
 
-export default function ArticleTitle({ children }: TitleProps) {
+export default function ArticleTitleOne({ children }: TitleProps) {
   return <h2 className="text-center text-3xl font-semibold">{children}</h2>;
 }

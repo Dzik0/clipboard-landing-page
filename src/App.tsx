@@ -1,7 +1,7 @@
-import Article from "./Components/ArticleComponent/Article";
-import ArticleImage from "./Components/ArticleComponent/ArticleImage";
-import ArticleInfo from "./Components/ArticleComponent/ArticleInfo";
-import ArticleTitle from "./Components/ArticleComponent/ArticleTitle";
+import ArticleOne from "./Components/ArticleOne/ArticleOne";
+import ArticleImageOne from "./Components/ArticleOne/ArticleImageOne";
+import ArticleInfoOne from "./Components/ArticleOne/ArticleInfoOne";
+import ArticleTitleOne from "./Components/ArticleOne/ArticleTitleOne";
 import Button from "./Components/Button";
 import Footer from "./Components/Footer";
 import Logo from "./Components/LogosComponent/Logo";
@@ -24,72 +24,79 @@ import text from "/icon-text.svg";
 import preview from "/icon-preview.svg";
 import device from "/image-devices.png";
 import computer from "/image-computer.png";
+import ArticleTwo from "./Components/ArticleTwo/ArticleTwo";
+import ArticleTitleTwo from "./Components/ArticleTwo/ArticleTitleTwo";
+import ArticleInfoTwo from "./Components/ArticleTwo/ArticleInfoTwo";
+import ArticleImageTwo from "./Components/ArticleTwo/ArticleImageTwo";
+import ArticlePerkTwo from "./Components/ArticleTwo/ArticlePerkTwo";
+import ArticlePerkTitleTwo from "./Components/ArticleTwo/ArticlePerkTitleTwo";
+import ArticlePerkInfoTwo from "./Components/ArticleTwo/ArticlePerkInfoTwo";
 
 export default function App() {
   return (
     <div>
-      <main className="px-5">
-        <Article>
-          <ArticleImage src={logo} />
+      <main className="mx-auto max-w-[1000px] overflow-hidden px-5">
+        <ArticleOne>
+          <ArticleImageOne src={logo} />
           <div className="flex flex-col gap-5">
-            <ArticleTitle>A history of everything you copy</ArticleTitle>
-            <ArticleInfo>
+            <ArticleTitleOne>A history of everything you copy</ArticleTitleOne>
+            <ArticleInfoOne>
               Clipboard allows you to track and organize everything you copy.
               Instatly access your clipboard on all your devices.
-            </ArticleInfo>
+            </ArticleInfoOne>
           </div>
-          <div className="flex w-full flex-col gap-5">
+          <div className="flex w-full flex-col gap-5 md:flex-row md:justify-center">
             <Button>Download for iOS</Button>
             <Button bgColor="blue">Download for Mac</Button>
           </div>
-        </Article>
+        </ArticleOne>
 
-        <section className="flex flex-col gap-15 py-20">
+        <ArticleTwo>
           <div className="flex flex-col gap-5 text-center">
-            <PerksTitle>Keep track of your snippets</PerksTitle>
-            <PerksInfo>
+            <ArticleTitleTwo>Keep track of your snippets</ArticleTitleTwo>
+            <ArticleInfoTwo>
               Clipboard instatntly stores any item you copy in the cloud,
               meaning you can access your snippets immediatly on all your
               devices. Our Mac and iOS apps will help you organize everything.
-            </PerksInfo>
+            </ArticleInfoTwo>
           </div>
+          <div className="flex flex-col gap-20 md:flex-row">
+            <ArticleImageTwo src={computer} />
+            <div className="flex flex-col gap-15">
+              <ArticlePerkTwo>
+                <ArticlePerkTitleTwo>Quick Search</ArticlePerkTitleTwo>
+                <ArticlePerkInfoTwo>
+                  Easily search your snippets by content, category, web adress,
+                  application and more.
+                </ArticlePerkInfoTwo>
+              </ArticlePerkTwo>
 
-          <SinglePerkImage src={computer} />
+              <ArticlePerkTwo>
+                <ArticlePerkTitleTwo>iCloud Sync</ArticlePerkTitleTwo>
+                <ArticlePerkInfoTwo>
+                  Instantly saves and synces snippets across all your devices.
+                </ArticlePerkInfoTwo>
+              </ArticlePerkTwo>
 
-          <div className="flex flex-col gap-15">
-            <SinglePerk>
-              <SinglePerkTitle>Quick Search</SinglePerkTitle>
-              <SinglePerkInfo>
-                Easily search your snippets by content, category, web adress,
-                application and more.
-              </SinglePerkInfo>
-            </SinglePerk>
-
-            <SinglePerk>
-              <SinglePerkTitle>iCloud Sync</SinglePerkTitle>
-              <SinglePerkInfo>
-                Instantly saves and synces snippets across all your devices.
-              </SinglePerkInfo>
-            </SinglePerk>
-
-            <SinglePerk>
-              <SinglePerkTitle>Complete History</SinglePerkTitle>
-              <SinglePerkInfo>
-                Retrive any snippets from the first moment you started using the
-                app.
-              </SinglePerkInfo>
-            </SinglePerk>
+              <ArticlePerkTwo>
+                <ArticlePerkTitleTwo>Complete History</ArticlePerkTitleTwo>
+                <ArticlePerkInfoTwo>
+                  Retrive any snippets from the first moment you started using
+                  the app.
+                </ArticlePerkInfoTwo>
+              </ArticlePerkTwo>
+            </div>
           </div>
-        </section>
+        </ArticleTwo>
 
-        <section className="flex flex-col gap-10 py-15 text-center">
-          <PerksTitle>Access Clipboard Anywhere</PerksTitle>
-          <PerksInfo>
+        <ArticleOne>
+          <ArticleTitleOne>Access Clipboard Anywhere</ArticleTitleOne>
+          <ArticleInfoOne>
             Whether you're on the go or at your computer, you can access all
             your Clipboard snippets in a few simple clicks.
-          </PerksInfo>
-          <SinglePerkImage src={device} />
-        </section>
+          </ArticleInfoOne>
+          <ArticleImageOne src={device} />
+        </ArticleOne>
 
         <PerksContainer>
           <div className="flex flex-col gap-5 text-center">
@@ -98,7 +105,7 @@ export default function App() {
               We've got the tools to boost your productivity.
             </PerksInfo>
           </div>
-          <div className="flex flex-col gap-12">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:items-start">
             <SinglePerk>
               <SinglePerkImage src={blacklist} />
               <SinglePerkTitle>Create blacklists</SinglePerkTitle>
@@ -135,20 +142,20 @@ export default function App() {
           <Logo src={vector} />
         </LogoContainer>
 
-        <Article>
+        <ArticleOne>
           <div className="flex flex-col gap-5">
-            <ArticleTitle>Clipboard for iOS and Mac OS</ArticleTitle>
-            <ArticleInfo>
+            <ArticleTitleOne>Clipboard for iOS and Mac OS</ArticleTitleOne>
+            <ArticleInfoOne>
               Avaible for free on the App store. Download for Mac OS or iOS,
               sync with iCloud and you're ready to start adding to your
               clipboard.
-            </ArticleInfo>
+            </ArticleInfoOne>
           </div>
-          <div className="flex w-full flex-col gap-5">
+          <div className="flex w-full flex-col gap-5 md:flex-row md:justify-center">
             <Button>Download for iOS</Button>
             <Button bgColor="blue">Download for Mac</Button>
           </div>
-        </Article>
+        </ArticleOne>
       </main>
 
       <Footer />

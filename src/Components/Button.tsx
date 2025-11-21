@@ -15,7 +15,7 @@ export default function Button({ children, bgColor = "green" }: ButtonProps) {
   return (
     <button
       className={clsx(
-        `${bgColorBtn} rounded-4xl p-3 font-semibold text-white shadow-[0px_5px_5px_2px]`,
+        `${bgColorBtn} cursor-pointer rounded-4xl p-3 font-semibold text-white shadow-[0px_5px_5px_2px] hover:opacity-85 md:px-20`,
       )}
     >
       {children}

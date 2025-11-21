@@ -1,73 +1,109 @@
-# React + TypeScript + Vite
+# 📋 Clipboard Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive landing page built with **React** and **Tailwind CSS** to showcase the Clipboard app.  
+Highlights features, benefits, and supported platforms with a clean design and smooth user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Preview
 
-## React Compiler
+![Clipboard Landing Page Screenshot](/screenshot.jpg)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Live demo: [https://dzik0.github.io/clipboard-landing-page](https://dzik0.github.io/clipboard-landing-page)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- 🎯 **Feature-rich sections** that explain the app’s core advantages and functionality
+- 📱 **Device and platform showcase** with clean imagery and descriptive content
+- 🛠️ **Reusable component architecture** for articles, perks, buttons, and logos
+- 💻 **Fully responsive layout** adapted for desktop and mobile devices
+- 🌐 **Trusted by top companies** logos for added credibility
+- ☁️ **Integration with iCloud syncing** and clipboard management features
+- 🛒 **Clear call-to-action buttons** for app downloads on iOS and Mac
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Tech Stack
+
+- **React** with functional components and hooks
+- **Tailwind CSS** for styling and responsive design
+- **Vite** for fast bundling and development
+
+---
+
+## 📁 File Structure
+
+```
+src/
+├── Components/
+│   ├── ArticleOne/                # Article layout components with images, title, and info
+│   ├── ArticleTwo/                # Alternate article layouts and perks
+│   ├── Button.tsx                 # Reusable button component
+│   ├── Footer.tsx                 # Page footer
+│   ├── LogosComponent/            # Logo and container component
+│   ├── PerksComponent/            # Perks display with titles, info, images
+│   ├── ...
+├── assets/                       # Images and SVGs like logos and icons
+├── App.tsx                       # Main entry and layout
+├── index.css                     # Tailwind and custom styles
+public/
+├── screenshot.jpg                # Project preview screenshot
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧠 How It Works
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- The landing page is composed of modular React components representing content sections including articles, perks, and logos.
+- Components arrange text, images, and CTAs in grid and flex layouts responsive to viewport size.
+- Uses Tailwind utilities to ensure consistent spacing, typography, and colors following a clean, modern design system.
+- CTA buttons prompt users to download the app for iOS or Mac with visual emphasis.
+
+---
+
+## 📦 Getting Started
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Dzik0/clipboard-landing-page.git
+   cd clipboard-landing-page
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## ✅ Future Improvements
+
+- Add smooth scroll and animations for section transitions
+- Implement internationalization (i18n) for multilingual support
+- Add accessibility enhancements (keyboard navigation and ARIA attributes)
+- Integrate analytics and conversion tracking
+
+---
+
+## 👨‍💻 Author
+
+**Dzik0**  
+GitHub: [https://github.com/Dzik0](https://github.com/Dzik0)
+
+---
+
+## 📝 License
+
+Open source under the [MIT License](LICENSE).
+
+---
